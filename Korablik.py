@@ -3,12 +3,12 @@ print " It's a little game about space. "
 print " The enemy in front of you, shoot his spaceship ."
 print " In order to shoot, enter the coordinates of the enemy ship ."
 Restart="Yes"
-while Restart == "Yes":
+while Restart == "Yes": 
     prop=1
     while prop == 1:
         Tx,Ty=input("Enter the coordinates of the ship, separated by commas ")
-        if Tx in range(9):
-            if Ty in range(9):
+        if Tx <= 8 and Tx >= 0:
+            if Ty <= 8 and Ty >= 0:
                 prop=0
         else :
             print "Error , limit 8 "
@@ -22,7 +22,7 @@ while Restart == "Yes":
                 result="You are victorious !!!"
             else:
                 print "Miss !!!"
-                limit_shots=limit_shots+1
+                limit_shots += 1
                 result="You lose"
                 if T1y > Ty:
                     print "Target is located below "
@@ -30,7 +30,7 @@ while Restart == "Yes":
                     print "The target is above "
         else :
             print "Miss !!!"
-            limit_shots=limit_shots+1
+            limit_shots += 1
             result="You lose"
             if T1x > Tx:
                 if T1y < Ty:
