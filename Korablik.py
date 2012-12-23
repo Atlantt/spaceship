@@ -2,7 +2,7 @@ print " Hello "
 print " It's a little game about space. "
 print " The enemy in front of you, shoot his spaceship ."
 print " In order to shoot, enter the coordinates of the enemy ship ."
-Restart="Yes"
+Restart="True"
 while Restart == "Yes": 
     prop=1
     while prop == 1:
@@ -48,4 +48,4 @@ while Restart == "Yes":
                     print "The target is to the right and below "
                 
     print result
-    Restart=raw_input("Enter the Yes to continue or No to end.  ")
+    Restart=raw_input("Enter the True to continue or False to end.  ")
